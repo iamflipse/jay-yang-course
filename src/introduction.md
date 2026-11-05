@@ -6,6 +6,8 @@
 2. *How to Build a Personal Brand That People Buy From* (22.9 min)
 3. *How to Create Ads That Make People Buy* (37.2 min)
 
+**Live course site:** <https://iamflipse.github.io/jay-yang-course/>
+
 ## How to use this course
 
 Jay's rule: **"learning is behavior change"** — "if you watch a video and you don't change your behavior, then did you actually learn?" Each chapter ends with a short exercise from the [workbook](exercises.md). Do the exercise before moving on.
