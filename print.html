@@ -1,0 +1,766 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Writing Words That Make People Buy</title>
+        <meta name="robots" content="noindex" />
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="A study course on copy thinking, personal brand, and paid ads — built from Jay Yang&#x27;s three &#x27;Full Courses&#x27; videos.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="introduction.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Part 1 — Copy Thinking</li><li class="chapter-item expanded "><a href="chapter-01-foundations.html"><strong aria-hidden="true">1.</strong> The Foundations of Marketing</a></li><li class="chapter-item expanded "><a href="chapter-02-six-ps.html"><strong aria-hidden="true">2.</strong> The Six P's of Copy Thinking</a></li><li class="chapter-item expanded "><a href="chapter-03-empathy-maps.html"><strong aria-hidden="true">3.</strong> Empathy Maps & Sales-Call Mining</a></li><li class="chapter-item expanded affix "><li class="part-title">Part 2 — Personal Brand</li><li class="chapter-item expanded "><a href="chapter-04-personal-brand.html"><strong aria-hidden="true">4.</strong> Building a Personal Brand That People Buy From</a></li><li class="chapter-item expanded "><a href="chapter-05-content-multiplication.html"><strong aria-hidden="true">5.</strong> Content Multiplication</a></li><li class="chapter-item expanded affix "><li class="part-title">Part 3 — Paid Ads</li><li class="chapter-item expanded "><a href="chapter-06-writing-ads.html"><strong aria-hidden="true">6.</strong> The 5-Step Ad Writing Process</a></li><li class="chapter-item expanded "><a href="chapter-07-media-buying.html"><strong aria-hidden="true">7.</strong> Media Buying Principles</a></li><li class="chapter-item expanded affix "><li class="part-title">Practice</li><li class="chapter-item expanded "><a href="exercises.html"><strong aria-hidden="true">8.</strong> Exercises (Workbook)</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Writing Words That Make People Buy</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
+<p><strong>Course:</strong> <em>Writing Words That Make People Buy</em> — a study course distilled from Jay Yang's three &quot;Full Courses&quot; (his &quot;trilogy&quot;):</p>
+<ol>
+<li><em>How To Write Words That Make People Buy</em> (43.5 min)</li>
+<li><em>How to Build a Personal Brand That People Buy From</em> (22.9 min)</li>
+<li><em>How to Create Ads That Make People Buy</em> (37.2 min)</li>
+</ol>
+<p><strong>Live sites:</strong></p>
+<ul>
+<li>Wiki: <a href="https://iamflipse.github.io/jay-yang-wiki/">https://iamflipse.github.io/jay-yang-wiki/</a> — concept notes + raw transcripts</li>
+<li>Course: <a href="https://iamflipse.github.io/jay-yang-course/">https://iamflipse.github.io/jay-yang-course/</a> — this site</li>
+</ul>
+<h2 id="how-to-use-this-course"><a class="header" href="#how-to-use-this-course">How to use this course</a></h2>
+<p>Jay's rule: <strong>&quot;learning is behavior change&quot;</strong> — &quot;if you watch a video and you don't change your behavior, then did you actually learn?&quot; Each chapter ends with a short exercise from the <a href="exercises.html">workbook</a>. Do the exercise before moving on.</p>
+<h2 id="what-youll-be-able-to-do"><a class="header" href="#what-youll-be-able-to-do">What you'll be able to do</a></h2>
+<ul>
+<li>Think about copy before writing it — the <strong>six P's</strong> (chapter 2)</li>
+<li>Build an <strong>empathy map</strong> and mine sales calls for the exact words your buyers use (chapter 3)</li>
+<li>Build a brand that creates <strong>future demand</strong> using <strong>PTL</strong> (chapter 4)</li>
+<li>Become prolific with the <strong>content multiplication system</strong>: Hall of Fame + the three R's (chapter 5)</li>
+<li>Run the <strong>5-step ad writing process</strong> for any client or yourself (chapter 6)</li>
+<li>Buy media like Jay's team: optimize for <strong>AOV/LTGP</strong>, run 15–30 creatives per $10K (chapter 7)</li>
+</ul>
+<h2 id="the-through-line"><a class="header" href="#the-through-line">The through-line</a></h2>
+<blockquote>
+<p>&quot;The game is won before the pen is even used.&quot; — research first, writing second.</p>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="the-foundations-of-marketing"><a class="header" href="#the-foundations-of-marketing">The Foundations of Marketing</a></h1>
+<blockquote>
+<p>&quot;Marketing to me is the process of reaching and converting customers. Put simply, if you can get in front of the right people and convince them to buy your thing, you win.&quot;</p>
+</blockquote>
+<h2 id="why-it-matters"><a class="header" href="#why-it-matters">Why it matters</a></h2>
+<blockquote>
+<p>&quot;When you have more demand than supply, it makes it pretty hard to lose.&quot;</p>
+</blockquote>
+<p>Mental model from course 2: if you tripled the leads coming into your business, what would happen? &quot;If you're a somewhat competent business owner, your business would grow.&quot;</p>
+<blockquote>
+<p>&quot;In an age where AI can basically build anything, it makes distribution — the ability to market things — more important.&quot;</p>
+</blockquote>
+<p>Do marketing right and: prospects come to you already talking about the problem you've written about; other founders ask how you get inbound; even potential teammates want to work with you.</p>
+<h2 id="the-two-types-of-demand"><a class="header" href="#the-two-types-of-demand">The two types of demand</a></h2>
+<blockquote>
+<p>&quot;There are actually two different types of marketing. Future demand versus current demand.&quot;</p>
+</blockquote>
+<ul>
+<li><strong>Current demand</strong> — customers who want your product <em>right now</em>. Captured with <strong>direct response / paid ads</strong>.</li>
+<li><strong>Future demand</strong> — customers who <em>will</em> want your product later. Created <strong>by having a brand</strong> (teaching the associations you want your audience to have).</li>
+</ul>
+<p>Car analogy: the likelihood of buying a car in the next 2 weeks is low; over 10 years it's high. A car company's goal isn't to hook you immediately — it's to build brand affinity so you think of that brand first when your buying window opens.</p>
+<blockquote>
+<p>&quot;Not everything that can be immediately measured matters.&quot;</p>
+</blockquote>
+<p>Most marketers chase only current demand because it's easy to measure; great marketers &quot;dance&quot; between the two.</p>
+<h2 id="business-math-ltv--cac"><a class="header" href="#business-math-ltv--cac">Business math: LTV : CAC</a></h2>
+<p>A business survives on the ratio of <strong>lifetime value per customer (LTV)</strong> to <strong>customer acquisition cost (CAC)</strong>. Building a brand improves both sides:</p>
+<ul>
+<li>CAC side: one piece of content reaches millions → more leads, and they're pre-sold because they feel they know and trust you.</li>
+<li>LTV side: branded customers pay more, buy more often, stay longer, and give you the benefit of the doubt.</li>
+</ul>
+<p>The &quot;201&quot; version: a brand also improves <strong>LTGPE : CAC</strong> (lifetime gross profit per employee vs. cost to acquire talent) — you attract better, longer-staying, value-aligned talent.</p>
+<h2 id="explore-then-exploit"><a class="header" href="#explore-then-exploit">Explore, then exploit</a></h2>
+<blockquote>
+<p>&quot;It's actually: explore with organic content, find the angles that are resonating, then exploit with paid ads.&quot;</p>
+</blockquote>
+<p>Two circles: organic widens the outer circle (awareness); ads compress into the inner circle (ready to buy).</p>
+<blockquote>
+<p>&quot;This arbitrage opportunity... you probably have a three-year window to go super hard on organic content and then super hard on paid ads, because arbitrage opportunities go away.&quot;</p>
+</blockquote>
+<h2 id="exercise"><a class="header" href="#exercise">Exercise</a></h2>
+<ol>
+<li>Write down one business or offer you have. Compute its rough LTV and CAC today.</li>
+<li>List the two demand types you're currently serving, and which one you're under-investing in.</li>
+<li>Pick one: either build the brand (future demand) or run a small paid test (current demand) this week.</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="the-six-ps-of-copy-thinking"><a class="header" href="#the-six-ps-of-copy-thinking">The Six P's of Copy Thinking</a></h1>
+<blockquote>
+<p>&quot;The first step to getting good at copywriting is to follow what I call the six P's of copy thinking — the process I go through with all of my clients before I write any piece of content or copy: people, positioning, promise, proof, priority and process.&quot;</p>
+</blockquote>
+<p>You can be handed templates (&quot;use identity-based hooks...&quot;), but &quot;I would much rather teach you how to fish than just simply give you fish&quot; — otherwise you repeat templates without understanding the <em>why</em>.</p>
+<h2 id="the-six-ps"><a class="header" href="#the-six-ps">The six P's</a></h2>
+<h3 id="1-people--who-is-the-offer-for"><a class="header" href="#1-people--who-is-the-offer-for">1. People — who is the offer for?</a></h3>
+<blockquote>
+<p>&quot;You can't answer 'why should they choose us' until you know who 'they' is.&quot;</p>
+</blockquote>
+<p>Worked example — marathon training program:</p>
+<ul>
+<li>Beginner who's never run one → promise: &quot;you'll finish your first marathon.&quot;</li>
+<li>Busy professional → &quot;a training plan that fits your 60-hour work week.&quot;</li>
+<li>Runner over 40 → &quot;run the marathon while staying healthy.&quot;</li>
+<li>Chasing Boston qualification → &quot;get you across the line by a lot.&quot;</li>
+<li>Coming back from injury → &quot;help you run a marathon while staying healthy.&quot;</li>
+</ul>
+<p>Get crystal clear on the avatar before anything else (see <a href="chapter-03-empathy-maps.html">ch. 3</a> for the empathy map).</p>
+<h3 id="2-positioning--why-them-over-anyone-else"><a class="header" href="#2-positioning--why-them-over-anyone-else">2. Positioning — why them over anyone else?</a></h3>
+<blockquote>
+<p>&quot;Positioning is how your product is perceived in your consumer's mind. Strong positioning increases brand recognition, lubricates the sales process, and makes it easier for others to talk about you.&quot;</p>
+</blockquote>
+<p>Seth Godin:</p>
+<blockquote>
+<p>&quot;Successful brands are built with your customers talking about you, not you talking about you.&quot;</p>
+</blockquote>
+<p>Case: <strong>Claude Hopkins &amp; Schlitz beer</strong> — Schlitz was dead last; every rival was making the same &quot;pure beer&quot; claim. Hopkins toured the brewery and found real differentiators (4,000-foot artesian wells, expensive filters, a 1,000-year-old mother yeast culture). He built the campaign around the <em>facts</em> of their process. They went from dead last to #1.</p>
+<blockquote>
+<p>&quot;You can use AI to write for you, but AI can't uncover the hidden advantages of your clients. Digging up those angles is on you.&quot;</p>
+</blockquote>
+<h3 id="3-promise--what-do-they-actually-get"><a class="header" href="#3-promise--what-do-they-actually-get">3. Promise — what do they actually get?</a></h3>
+<p>Not features or deliverables — it's the outcome: who the customer becomes.</p>
+<blockquote>
+<p>Steve Jobs didn't say &quot;5GB of data.&quot; He said: &quot;a thousand songs that fit in your pocket.&quot;</p>
+</blockquote>
+<p><strong>The &quot;so what?&quot; test</strong>: keep asking &quot;so what?&quot; until you reach the core outcome.
+Artisan rug example: 5x5 silk rug → &quot;anchors your room&quot; → &quot;your room feels intentional, not random&quot; → &quot;visitors think you have great taste&quot; → &quot;you feel like someone with a home worth showing off.&quot;</p>
+<blockquote>
+<p>&quot;If you're not clear about the core outcome, your customers won't be clear either. And if you confuse, you lose.&quot;</p>
+</blockquote>
+<h3 id="4-proof--why-should-i-trust-you"><a class="header" href="#4-proof--why-should-i-trust-you">4. Proof — why should I trust you?</a></h3>
+<blockquote>
+<p>&quot;Trust is belief with evidence. Belief without evidence is called faith.&quot;</p>
+</blockquote>
+<p>Three types of proof:</p>
+<ol>
+<li><strong>Authority by association</strong> — &quot;Elon says X,&quot; &quot;Dr. So-and-so says do this.&quot;</li>
+<li><strong>Your own results</strong> — &quot;I scaled my business to $500K/yr. Here are the 5 lessons.&quot; / &quot;I went from $8/hr barista to millionaire by 24.&quot;</li>
+<li><strong>Client stories</strong> (the strongest) — &quot;This is Sabrina. I helped her go from $50K/yr as a teacher to $50K/month as a high-ticket closer.&quot;</li>
+</ol>
+<p><strong>Proof is relative</strong>: match it to the avatar. Selling to a 50-year-old Asian woman? Show proof from similar women, not &quot;a young white kid from Alabama.&quot;</p>
+<p><strong>The deaf-and-mute test</strong>: pretend you can only point. You can't point at &quot;trusted by industry leaders&quot; — but you <em>can</em> point at logos. You can't point at &quot;proven results&quot; — but you can point at a number: &quot;2,600+ ads tested for a $106M-in-3-days launch.&quot;</p>
+<h3 id="5-priority--why-act-now"><a class="header" href="#5-priority--why-act-now">5. Priority — why act now?</a></h3>
+<blockquote>
+<p>&quot;There are only two reasons people act: toward something pleasurable, or away from something painful.&quot; He prefers pain:</p>
+</blockquote>
+<blockquote>
+<p>&quot;People will jog towards pleasure, but they will sprint away from pain.&quot;</p>
+</blockquote>
+<p>Three levers:</p>
+<ol>
+<li><strong>Scarcity</strong> — &quot;only X spots left.&quot;</li>
+<li><strong>Urgency</strong> — &quot;this goes away in N days.&quot;</li>
+<li><strong>Cost of inaction</strong> (his favorite) — what happens if you stay on your current path?</li>
+</ol>
+<blockquote>
+<p>&quot;The gap between where they are and where they want to be creates deprivation, and deprivation is the cousin of motivation. If you're drowning underwater, you don't casually swim up — you kick and claw your way to air.&quot;</p>
+</blockquote>
+<h3 id="6-process--how-does-the-offer-work"><a class="header" href="#6-process--how-does-the-offer-work">6. Process — how does the offer work?</a></h3>
+<p>A good process does four things: explains why other solutions fail; creates a believable path; feels different; is easy to understand.</p>
+<p>Finding yours: <strong>&quot;Most people believe X. It's wrong because of Y. And the answer is actually Z.&quot;</strong></p>
+<ul>
+<li>&quot;Everyone thinks you need to start a business to make money online — wrong, because you can get paid without being an influencer or building a whole business. It's called high-ticket sales.&quot;</li>
+<li>&quot;Everyone thinks more activity equals more progress — wrong, because you scale faster by finding and solving the limiting factor. We call this the <strong>value acceleration method</strong>.&quot;</li>
+</ul>
+<h2 id="worked-example-alex-hermosi-course-1-1624"><a class="header" href="#worked-example-alex-hermosi-course-1-1624">Worked example: Alex Hermosi (course 1, ~16:24)</a></h2>
+<div class="table-wrapper"><table><thead><tr><th>P</th><th>Content</th></tr></thead><tbody>
+<tr><td>People</td><td>Business owners doing &gt;$500K/yr</td></tr>
+<tr><td>Positioning</td><td>&quot;We teach you what's working in our portfolio companies&quot;</td></tr>
+<tr><td>Promise</td><td>Learn the 1–3 things to scale past your current level</td></tr>
+<tr><td>Proof</td><td>&quot;Last year my portfolio generated over $250M in aggregate revenue&quot;</td></tr>
+<tr><td>Priority</td><td>&quot;If you don't act, you don't have a business, you have a job&quot;; workshops get booked out</td></tr>
+<tr><td>Process</td><td>The value acceleration method</td></tr>
+</tbody></table>
+</div>
+<p>Resulting ad (course 1, ~17:12):</p>
+<blockquote>
+<p>&quot;If your business is doing between $1–3M a year, you're in what we call <strong>the swamp</strong> — too busy to work on the business, but not enough cash to hire the key hires. That's key-man risk. At our scaling workshops, we help you break the cycle. If you're a business owner, come to our Vegas headquarters to see how we scale using the value acceleration method. Click below, book a call.&quot;</p>
+</blockquote>
+<h2 id="exercise-1"><a class="header" href="#exercise-1">Exercise</a></h2>
+<p>Fill in the six P's for your own offer (or a client's). The ad &quot;almost writes itself&quot; once the P's are in.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="empathy-maps--sales-call-mining"><a class="header" href="#empathy-maps--sales-call-mining">Empathy Maps &amp; Sales-Call Mining</a></h1>
+<p>The <strong>People</strong> P is built with an <strong>empathy map</strong> (course 1, ~05:06).</p>
+<h2 id="how-to-draw-the-empathy-map"><a class="header" href="#how-to-draw-the-empathy-map">How to draw the empathy map</a></h2>
+<p>Two axes. Start with the avatar's <strong>current reality</strong>: what are they doing, seeing, hearing, smelling, and feeling day-to-day? Then:</p>
+<ul>
+<li>Down = <strong>fears</strong> (&quot;where do they <em>not</em> want to end up? What's their worst-case reality?&quot;)</li>
+<li>Up = <strong>goals</strong> (&quot;the reality they <em>want</em> to reach.&quot;)</li>
+</ul>
+<blockquote>
+<p>&quot;The golden rule is treat others the way you want to be treated. But there's a rule above that — the <strong>platinum rule</strong>: treat other people the way <em>they</em> want to be treated. That's true empathy: yourself in their shoes, not them in yours.&quot;</p>
+</blockquote>
+<blockquote>
+<p>&quot;My personal rule: I don't start writing copy until I have an overabundance of material — until I have almost too much to say.&quot;</p>
+</blockquote>
+<h2 id="the-pro-tip-talk-to-your-customers"><a class="header" href="#the-pro-tip-talk-to-your-customers">The pro tip: talk to your customers</a></h2>
+<blockquote>
+<p>&quot;Some of the best ads we've ever run came from downloading all our sales calls, transcribing them, identifying the specific reasons customers gave for buying — then saying those exact phrases back to them in the ads.&quot;</p>
+</blockquote>
+<div class="table-wrapper"><table><thead><tr><th>What the customer said on the call</th><th>The ad hook it became</th></tr></thead><tbody>
+<tr><td>&quot;I'm ready to build something that gives me more freedom, flexibility, and control over my time and income&quot;</td><td>&quot;The most dangerous thing a woman can do is become disgustingly financially independent.&quot;</td></tr>
+<tr><td>&quot;I'm excited to invest in myself... escape the 9-to-5 for more freedom and time to live&quot;</td><td>&quot;The normal path will never make you a millionaire nowadays.&quot;</td></tr>
+<tr><td>&quot;I've been a stay-at-home mom for years. With my kids in school, I finally have time to do something for myself and make some money&quot;</td><td>&quot;If you've been looking for a way to make money around your kid's schedule without starting a whole business, you need to hear this.&quot;</td></tr>
+<tr><td>&quot;My goal is consistent $30K months so I can leave corporate sales&quot;</td><td>&quot;You don't have to quit your job, move cities, or blow up your life to make more money. You just have to learn one skill.&quot;</td></tr>
+<tr><td>&quot;I'm a broke, overworked Chicago girl... turning 30 this year, ready for financial stability&quot;</td><td>&quot;If hard work was the answer, the donkey would own the farm.&quot;</td></tr>
+</tbody></table>
+</div>
+<h2 id="the-core-principle"><a class="header" href="#the-core-principle">The core principle</a></h2>
+<blockquote>
+<p>&quot;If you can describe someone's pain point better than they can, they'll subconsciously believe you have the solution. <strong>The pain is the pitch.</strong>&quot;</p>
+</blockquote>
+<p>This same mining reappears in course 2 (saying customers' reasons — freedom, uncapped income, time with kids — back in ads) and is formalized in course 3 as the <strong>&quot;why they buy&quot; sheet</strong> (ch. 6).</p>
+<h2 id="exercise-2"><a class="header" href="#exercise-2">Exercise</a></h2>
+<ol>
+<li>Draw the empathy map for your avatar: current reality / fears / goals.</li>
+<li>If you have sales calls, transcripts, or even support tickets: pull 10 verbatim customer phrases about <em>why they bought</em>.</li>
+<li>Turn 3 of those phrases into ad hooks.</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="building-a-personal-brand-that-people-buy-from"><a class="header" href="#building-a-personal-brand-that-people-buy-from">Building a Personal Brand That People Buy From</a></h1>
+<blockquote>
+<p>&quot;If you want to just get views, this video is not for you.&quot;</p>
+</blockquote>
+<p>Jay's own results with a 500,000-person brand: worked with his heroes, built demand before launching anything, got access to rooms that accelerated his career, and met lifelong friends (course 2, 00:03).</p>
+<h2 id="what-is-a-brand"><a class="header" href="#what-is-a-brand">What is a brand?</a></h2>
+<blockquote>
+<p>&quot;A brand is about <strong>teaching</strong>... it's teaching the associations you want your audience to have. Bad branding is when your audience makes those associations on your behalf. Good branding is when you make those associations for your audience. It's intentional.&quot;</p>
+</blockquote>
+<p>Prompt: &quot;What things do I need to be associated with, so that when my audience has a problem, they think of me first?&quot;</p>
+<p>Jay's own positioning:</p>
+<blockquote>
+<p>&quot;I want people to know that I am the best damn social media copywriter in the space. I'm a marketing strategist and I have a lot of proof at a young age. Investing in me is like investing in Bitcoin in 2008.&quot;</p>
+</blockquote>
+<h2 id="ptl-power-trust-likeness"><a class="header" href="#ptl-power-trust-likeness">PTL: Power, Trust, Likeness</a></h2>
+<blockquote>
+<p>&quot;People are primarily influenced by three things.&quot;</p>
+</blockquote>
+<h3 id="power"><a class="header" href="#power">Power</a></h3>
+<p>Your ability to affect change in the world — show you can <em>do things</em>.</p>
+<ul>
+<li>Visual: record in front of your HQ, a car, a mansion.</li>
+<li>Verbal: &quot;My portfolio has generated over $250M in aggregate revenue last year.&quot;</li>
+<li><strong>Power is relative</strong>: the bartender controls drinks inside the bar; step outside and the power evaporates. An investor has power over founders in the pitch room; at his kid's soccer game he's &quot;just a parent.&quot;</li>
+</ul>
+<blockquote>
+<p>&quot;In your content, think about how you show power both verbally and visually.&quot;</p>
+</blockquote>
+<h3 id="trust"><a class="header" href="#trust">Trust</a></h3>
+<blockquote>
+<p>&quot;Trust is belief with evidence. Belief without evidence is called faith.&quot;</p>
+</blockquote>
+<p>How trust is built: you tell your audience to do something → they do it → a good result happens → they associate that value with you. The <strong>Martha Stewart</strong> example: for years she gave women step-by-step baking directions; the women got compliments and associated that value with Martha — so when she says &quot;buy my cookbook,&quot; they buy.</p>
+<p>Tactics: give step-by-step directions (&quot;read these 50 marketing books,&quot; &quot;use this tool to distribute your content,&quot; &quot;use these hooks in your content&quot;).</p>
+<blockquote>
+<p>&quot;We have high trust with our parents because for years we listened and got good results — 'eat your veggies and you'll grow.'&quot;</p>
+</blockquote>
+<h3 id="likeness"><a class="header" href="#likeness">Likeness</a></h3>
+<p>How similar you are to your audience — the <strong>in-group effect</strong>: we listen more to people from the group we identify with; favoritism to the in-group, skepticism toward the out-group.</p>
+<ul>
+<li><strong>External</strong>: how you talk, what you wear, how you look.</li>
+<li><strong>Internal</strong>: the beliefs and values you signal.</li>
+</ul>
+<blockquote>
+<p>&quot;Whenever I'm doing marketing for a company, the first thing I do is get really clear on who we're targeting.&quot;</p>
+</blockquote>
+<h3 id="application"><a class="header" href="#application">Application</a></h3>
+<blockquote>
+<p>&quot;If you want to build an influential brand in 2026 and beyond, demonstrate <strong>power, trust, and likeness</strong> over and over and over again in your content.&quot;</p>
+</blockquote>
+<h2 id="niche-by-transformation-not-by-topic"><a class="header" href="#niche-by-transformation-not-by-topic">Niche by transformation, not by topic</a></h2>
+<blockquote>
+<p>&quot;Most people say pick a topic, that's your niche, only talk about that one thing. You can build a decent business that way — but it's more durable and better in the long run to <strong>niche by transformation</strong>.&quot;</p>
+</blockquote>
+<p>Take someone from A to Z; there are many subtopics along the transformation journey, and you can talk about any of them as long as they help your audience get from where they are to where they want to be.</p>
+<p>Skyscraper vs city: a narrow topic is a skyscraper; a transformation niche is a city.</p>
+<h2 id="niche-vs-being-yourself"><a class="header" href="#niche-vs-being-yourself">Niche vs. being yourself</a></h2>
+<p>Two content approaches:</p>
+<ol>
+<li>Super-niche: only one thing, only for people interested right now.</li>
+<li>&quot;Be yourself&quot;: reach many people, educate them into fans.</li>
+</ol>
+<blockquote>
+<p>&quot;Your thousand true fans are probably not your first thousand followers. You'll probably have to get 10,000 or maybe 100,000 followers and nurture and educate them into being fans.&quot;</p>
+</blockquote>
+<h2 id="exercise-3"><a class="header" href="#exercise-3">Exercise</a></h2>
+<ol>
+<li>Write your PTL statement: what will you demonstrate, and how (verbally + visually)?</li>
+<li>Pick your transformation (A → Z) and list 5 subtopics you can create content for.</li>
+<li>Schedule one content piece this week that demonstrates one of PTL.</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="content-multiplication"><a class="header" href="#content-multiplication">Content Multiplication</a></h1>
+<blockquote>
+<p>&quot;If you're always wondering how these people post multiple times on multiple platforms at such a high level, it's because of this content multiplication system.&quot;</p>
+</blockquote>
+<p>Jay says it's &quot;the thing I've been doing behind the scenes for all the top personal brands in the space&quot; (course 2, ~10:52).</p>
+<h2 id="why-start-on-x-twitter"><a class="header" href="#why-start-on-x-twitter">Why start on X (Twitter)</a></h2>
+<ol>
+<li>You're not penalized for posting volume — 10+ posts/day is fine.</li>
+<li>When a tweet does well, you know <strong>the idea</strong> (not the visual) is validated — so you can multiply it.</li>
+</ol>
+<h2 id="the-three-rs"><a class="header" href="#the-three-rs">The three R's</a></h2>
+<p>Run on any outperforming post:</p>
+<ol>
+<li><strong>Repost</strong> — republish ~90 days later.
+<blockquote>
+<p>&quot;The majority of your audience hadn't seen the first post.&quot; And for the people who saw both: &quot;we need to be reminded about the core few things more than we need to be taught new things.&quot;</p>
+</blockquote>
+</li>
+<li><strong>Repurpose</strong> — take the validated idea and reformat it for each platform as its own channel (Instagram, LinkedIn, ad hook, YouTube video, newsletter).
+<blockquote>
+<p>&quot;It's not as easy as taking a tweet and posting it on another platform. Treat every platform like a separate channel.&quot;</p>
+</blockquote>
+</li>
+<li><strong>Remix</strong> — rewrite the same post in many ways:
+<ul>
+<li><em>Same idea, different format</em>: &quot;Winners get better, losers get bitter&quot; → &quot;The fastest way to never get what you want is to be bitter when other people are winning.&quot;</li>
+<li><em>Different idea, same template</em>: &quot;X people do X, Y people do Y&quot; → &quot;Rich people focus on saving time, poor people focus on saving money.&quot;</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>&quot;You can turn one idea into 10.&quot;</p>
+</blockquote>
+<h2 id="the-hall-of-fame"><a class="header" href="#the-hall-of-fame">The Hall of Fame</a></h2>
+<blockquote>
+<p>&quot;I like to use what I call a <strong>hall of fame</strong> — take any post that does above your average engagement or impressions and save it to a database: name of the post, link, when it was posted, and whether you've already reposted it.&quot;</p>
+</blockquote>
+<blockquote>
+<p>&quot;By year five or six you're basically just replaying your best hits — like a musician on tour isn't playing new songs, they play the already-proven ones.&quot;</p>
+</blockquote>
+<h2 id="recap"><a class="header" href="#recap">Recap</a></h2>
+<blockquote>
+<p>&quot;Step one: build a hall of fame. Step two: use the three R's. If you master generating future demand, the world is yours.&quot;</p>
+</blockquote>
+<h2 id="exercise-4"><a class="header" href="#exercise-4">Exercise</a></h2>
+<ol>
+<li>Build your Hall of Fame (spreadsheet or doc): 5 of your best posts, with engagement numbers.</li>
+<li>Take the top post and produce: 1 repost (90 days out), 2 repurposes (e.g. LinkedIn + Instagram), and 3 remixes.</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="the-5-step-ad-writing-process"><a class="header" href="#the-5-step-ad-writing-process">The 5-Step Ad Writing Process</a></h1>
+<p>From course 3 (~04:27): &quot;The five steps I go through whenever I'm signing a new client to help them build their ads system.&quot;</p>
+<h2 id="step-1--the-story-bible"><a class="header" href="#step-1--the-story-bible">Step 1 — The Story Bible</a></h2>
+<p>A &quot;universal source of truth&quot;: a living document you pull from whenever you write a piece of copy or an ad.</p>
+<p>It contains:</p>
+<ul>
+<li>Who the client is + their full life story</li>
+<li>Who the customers are</li>
+<li>The offer and the funnel</li>
+<li>The <strong>credibility bank</strong> (impressive results, frameworks, concepts the client talks about)</li>
+<li>The avatar's top objections + where they hang out</li>
+<li>Required links, approved/banned words, claims and guarantees</li>
+<li>Voice examples (how the client sounds)</li>
+</ul>
+<p>Sources: interview the client (or yourself), YouTube videos, podcasts.</p>
+<blockquote>
+<p>&quot;In a 60-second reel you can hide behind a script. A YouTube video is no-hiding.&quot;</p>
+</blockquote>
+<p>AI assist: for video-only creators, use Claude to download + transcribe their Instagram videos and build a <strong>voice skill</strong>.</p>
+<blockquote>
+<p>&quot;We update the story Bible in real time, so each iteration of ads makes the next batch better.&quot;</p>
+</blockquote>
+<h2 id="step-2--the-why-they-buy-sheet"><a class="header" href="#step-2--the-why-they-buy-sheet">Step 2 — The &quot;Why They Buy&quot; Sheet</a></h2>
+<blockquote>
+<p>&quot;One of those tactics that are super juicy, I feel uncomfortable giving away in free content. It absolutely crushes.&quot;</p>
+</blockquote>
+<p>Download the client's sales calls → transcribe → pull out key phrasings to say back in the ads:</p>
+<ul>
+<li>The exact words for <strong>why they bought</strong></li>
+<li>Their <strong>dream outcome</strong></li>
+<li>Current <strong>pains and frustrations</strong></li>
+<li><strong>Objections</strong> (why they were hesitant)</li>
+</ul>
+<p>Then build a <strong>PCP (Perfect Client Profile)</strong>: the customers who pay the most, stay the longest, and who you most enjoy helping.</p>
+<blockquote>
+<p>&quot;This is strategy: identify the 20% that gets 80% of the returns — the messaging that got these people in the door — and align it across the funnel. More of the people you want, less of the people you don't.&quot;</p>
+</blockquote>
+<p>No sales calls? Mine <strong>competitor comment sections, Reddit, and Amazon 3-star reviews</strong>:</p>
+<blockquote>
+<p>&quot;The 3-star reviews are typically the most truthful.&quot;</p>
+</blockquote>
+<h2 id="step-3--research"><a class="header" href="#step-3--research">Step 3 — Research</a></h2>
+<blockquote>
+<p>&quot;This is the magic sauce. This is the difference between okay copywriters and great copywriters.&quot;</p>
+</blockquote>
+<p>Eugene Schwartz:</p>
+<blockquote>
+<p>&quot;Copy cannot create desire. It can only channel existing desire.&quot;</p>
+</blockquote>
+<blockquote>
+<p>&quot;The best copywriters I know don't have English degrees... they are masters of psychology.&quot;</p>
+</blockquote>
+<p>Research checklist:</p>
+<ol>
+<li>
+<p><strong>Market</strong> — is it validated? Three filters:</p>
+<ul>
+<li>Are people already paying? (Meta Ads Library: competitors' ads running for months = money in the market)</li>
+<li>Is there an untapped subgroup nobody's marketing to?</li>
+<li>Do they already know they have a problem?</li>
+</ul>
+<blockquote>
+<p>The &quot;starving crowd&quot; beats every other advantage (burger-stand thought experiment: the best advantage isn't better meat or location — it's a starving crowd).</p>
+</blockquote>
+</li>
+<li>
+<p><strong>Offer</strong> — copy can only communicate the value the offer already has. Tweak via the <strong>three vectors of value: speed, risk, ease</strong>.</p>
+<blockquote>
+<p>Fitness example: a $10K/6-month gym program is a weak offer; &quot;one pill a morning, no gym, no diet&quot; is a stronger offer. Find the weakest vector and tweak it.</p>
+</blockquote>
+</li>
+<li>
+<p><strong>Awareness levels</strong> (Schwartz's five): unaware → problem-aware → solution-aware → product-aware → most-aware. Each level changes your ad language (see the awareness table in <a href="chapter-06-writing-ads.html#awareness">ch. 6 recap</a>).</p>
+</li>
+<li>
+<p><strong>Market sophistication</strong> (five stages; see below).</p>
+</li>
+<li>
+<p><strong>Unique mechanism</strong> —</p>
+<blockquote>
+<p>&quot;A unique mechanism is an explanation of why other solutions fail and why yours is better.&quot; Find yours with: &quot;Most people believe X. It's wrong because of Y. And the answer is actually Z.&quot;</p>
+</blockquote>
+<p>Worked: &quot;Most business owners think it's a leads problem. Actually it's not that you lack customers — you don't know how to <strong>monetize</strong> them. You don't have a <strong>money model</strong>.&quot; (The frame behind the Money Models book.)</p>
+<p>Worked client case: a 7-figure fitness business built entirely on the frame &quot;you don't lack discipline, you lack an <strong>accountability buddy</strong>.&quot;</p>
+</li>
+<li>
+<p><strong>Big idea</strong> (Ogilvy: &quot;if you don't have a big idea, your advertising will pass like a ship in the night&quot;). A big idea is <strong>new, easy, safe, big</strong>.</p>
+<ul>
+<li>De Beers: &quot;diamonds are forever&quot; — changed culture.</li>
+<li>Shelby Sap: &quot;the Porsche Pilates lifestyle&quot; — named a feeling her audience couldn't articulate.</li>
+</ul>
+</li>
+<li>
+<p><strong>Beliefs</strong> — before buying, customers must believe in: the <strong>vehicle</strong> (does it work), <strong>themselves</strong> (internal), and the <strong>external world</strong> (will it work in my life). Rotate these beliefs across ads so objections are pre-handled by checkout.</p>
+</li>
+</ol>
+<h2 id="step-4--write-the-ad"><a class="header" href="#step-4--write-the-ad">Step 4 — Write the ad</a></h2>
+<p>Per ad: <strong>5 hooks, 1 body, ~3 CTAs</strong> — <strong>kaleidoscoping</strong>: test many hook angles against one body before opening a new ad set.</p>
+<p><strong>Where to find hooks</strong> (5 places, course 3 ~24:52):</p>
+<ol>
+<li>Your previous winning ads (Meta Ads Library)</li>
+<li>Competitors' ads (Meta Ads Library)</li>
+<li>Your own organic content (the explore → exploit loop)</li>
+<li>Other people's free content</li>
+<li><strong>Outlier tweets</strong> from &quot;money Twitter&quot;:
+<blockquote>
+<p>&quot;When Elon Musk takes a bathroom break, he's not scrolling Instagram — he's on Twitter.&quot;
+Example: a 400K-view tweet (&quot;Have you ever had a job where you thought none of this matters?&quot;) → hook: &quot;If you've ever sat at your desk and thought none of this matters, this video is for you.&quot;</p>
+</blockquote>
+</li>
+</ol>
+<p><strong>Hook rules</strong>:</p>
+<ul>
+<li><strong>Specificity sells</strong> (Claude Hopkins): &quot;Platitudes and generalities roll off the human understanding like water off a duck's back.&quot; &quot;Are you broke?&quot; is weak; &quot;Do you turn your phone brightness down when you open your bank app?&quot; is strong.</li>
+<li>The hook must be a <strong>promise that opens a curiosity gap</strong> — not a bare statement.</li>
+<li>Be specific in hooks, broader in bodies (the body gets reused across hooks).</li>
+<li>&quot;We state the facts and tell the truth. We don't write lies; we manipulate reality so the copy is better.&quot;</li>
+<li>Outcomes must be visualizable: not &quot;you'll sleep better,&quot; but &quot;on average, our customers fall asleep in under 10 minutes.&quot;</li>
+</ul>
+<p><strong>The 5-point pre-ship checklist</strong>:</p>
+<ol>
+<li>Is it a call-out or an open loop?</li>
+<li>Would our client say this out loud to a friend in a coffee shop?</li>
+<li>Would a stranger with zero context understand it?</li>
+<li>Is it free of insider language and buzzwords?</li>
+<li>Is it concrete and visualizable?</li>
+</ol>
+<p><strong>CTA formula</strong>: <strong>Who does what, by when, and how.</strong></p>
+<blockquote>
+<p>&quot;If you're a woman who wants to break into high-ticket sales, then I want you to register for my free Zoom masterclass this Tuesday at 8pm ET. Click below and save your spot.&quot;</p>
+</blockquote>
+<h2 id="step-5--ship-measure-double-down"><a class="header" href="#step-5--ship-measure-double-down">Step 5 — Ship, measure, double down</a></h2>
+<p>When one ad set's hooks outperform, &quot;double down on that branch&quot; rather than rebuilding the ad.</p>
+<details><summary>Awareness & sophistication quick reference</summary>
+<p><strong>Awareness</strong> (customer's knowledge):
+| Level | Ad language |
+|---|---|
+| Unaware | Name the problem (&quot;you may have a misplaced disk&quot;) |
+| Problem-aware | Recommend + explain why your solution |
+| Solution-aware | Differentiate: why yours is different/better |
+| Product-aware / Most-aware | Present the compelling offer; skim the goodwill organic content built |</p>
+<p><strong>Sophistication</strong> (market's saturation):
+| Stage | Move |
+|---|---|
+| 1 no claim made | Make the claim |
+| 2 competitors arrive | Make a bigger claim |
+| 3 claims worn out | Introduce a <strong>mechanism</strong> |
+| 4 mechanism copied | Improve the mechanism |
+| 5 saturated | Identify with the person they want to become (personal brand) |</p>
+<p>Identify your stage: check 20 competitor ads in the Meta Ads Library — if they all make the same claim, you're stage 3+ and need a mechanism.</p>
+</details>
+<h2 id="principles-woven-through-the-chapter"><a class="header" href="#principles-woven-through-the-chapter">Principles woven through the chapter</a></h2>
+<ul>
+<li><strong>Respect the reader</strong> (Ogilvy): &quot;Your consumer is not a moron. It is your wife, as best as possible.&quot; No fake urgency; under-delivery spawns negative word-of-mouth that &quot;will be on the internet forever.&quot;</li>
+<li><strong>Damaging admission</strong>: &quot;I'm 20 years old, I can't dance, I can't golf, I can't even drink yet. But the one thing I know with 100% confidence is that I am a dangerous copywriter.&quot;</li>
+<li><strong>Copy is a mall window</strong>: &quot;The goal is to see the items in the store, not to look at the glass.&quot;</li>
+<li><strong>AI use</strong>: write the copy yourself (writing = thinking); use AI for research, competitor analysis, and batch review of finished ads.</li>
+</ul>
+<h2 id="exercise-5"><a class="header" href="#exercise-5">Exercise</a></h2>
+<p>Run steps 1–4 on one real offer: build a 1-page Story Bible, a 5-line why-they-buy sheet, and one ad (5 hooks, 1 body, 1 CTA).</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="media-buying-principles"><a class="header" href="#media-buying-principles">Media Buying Principles</a></h1>
+<blockquote>
+<p>&quot;I am not a media buyer. But here are the principles we've learned, to save you time.&quot;</p>
+</blockquote>
+<h2 id="1-optimize-for-aov--ltgp-not-cpl"><a class="header" href="#1-optimize-for-aov--ltgp-not-cpl">1. Optimize for AOV / LTGP, not CPL</a></h2>
+<blockquote>
+<p>&quot;We don't optimize for cost per lead. We optimize for average order value / lifetime gross profit per customer.&quot;</p>
+</blockquote>
+<p>Money Models launch test (course 3, ~34:02):</p>
+<div class="table-wrapper"><table><thead><tr><th>Campaign</th><th>CPL</th><th>Result</th></tr></thead><tbody>
+<tr><td>Optimized for CPL</td><td>~$5</td><td>~$20 LTGP (bought the book, no upsells)</td></tr>
+<tr><td>Optimized for ROAS / AOV / LTGP</td><td>$17</td><td><strong>$189 AOV</strong> (book + workbooks + upsells)</td></tr>
+</tbody></table>
+</div>
+<blockquote>
+<p>&quot;Cheap leads aren't necessarily good leads. We want the highest ROAS or gross profit.&quot;</p>
+</blockquote>
+<h2 id="2-creative-volume-1530-variations-per-10k"><a class="header" href="#2-creative-volume-1530-variations-per-10k">2. Creative volume: 15–30 variations per $10K</a></h2>
+<blockquote>
+<p>&quot;For every $10K we spend on ads, we want about 15–30 different creative variations so we don't fatigue our ads as we scale.&quot; This is why kaleidoscoping (5 hooks / 1 body / 3 CTAs per ad) exists (ch. 6).</p>
+</blockquote>
+<h2 id="3-volume-without-quality-is-a-waste-of-time"><a class="header" href="#3-volume-without-quality-is-a-waste-of-time">3. Volume without quality is a waste of time</a></h2>
+<p>Don't iterate by swapping shirts, backgrounds, or camera angles:</p>
+<blockquote>
+<p>&quot;In 2026, the copy is the targeting. Find a winning angle and iterate on that angle.&quot;</p>
+</blockquote>
+<p>Example: stay-at-home moms — &quot;making money so your kids will be proud of you&quot; vs. &quot;making money so you can stay with your kids.&quot; Presence beats pride; make many variations of <em>that</em> angle.</p>
+<h2 id="4-stop-rebuilding-campaigns"><a class="header" href="#4-stop-rebuilding-campaigns">4. Stop rebuilding campaigns</a></h2>
+<blockquote>
+<p>&quot;Meta typically wants 50 conversions in a 14-day window. Give your ads time to breathe and the algorithm time to figure out who's best for your ads.&quot;</p>
+</blockquote>
+<h2 id="targeting-in-2026"><a class="header" href="#targeting-in-2026">Targeting in 2026</a></h2>
+<blockquote>
+<p>&quot;Meta's Andromeda AI does most of the targeting. Now the targeting is the copy.&quot;</p>
+</blockquote>
+<ul>
+<li>70–80% of spend runs to <strong>broad targeting</strong>; Meta reads your text and visuals and routes to the most likely responders, then expands or contracts based on their impressions/engagement.</li>
+<li>Meta rewards ads that keep people on the platform: podcast-style, organic-feeling creative over &quot;ad-like&quot; creative.</li>
+</ul>
+<h2 id="hook-sourcing-recap"><a class="header" href="#hook-sourcing-recap">Hook sourcing recap</a></h2>
+<p>The five hook sources (previous ads, competitors, your organic content, others' free content, outlier tweets) are in ch. 6. The quality rules: specificity (Hopkins), promise + curiosity gap, visualizable outcomes, state the facts.</p>
+<h2 id="exercise-6"><a class="header" href="#exercise-6">Exercise</a></h2>
+<ol>
+<li>Take your last (or next) ad set. If you were optimizing for CPL, reframe the objective around AOV / LTGP.</li>
+<li>Count your creatives per $10K; if under 15, plan the variation batch (kaleidoscope the hooks).</li>
+<li>Check your campaigns: are you rebuilding more often than Meta's learning window? If so, stop and let it breathe.</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="exercises-workbook"><a class="header" href="#exercises-workbook">Exercises (Workbook)</a></h1>
+<p>Jay's rule: <strong>&quot;learning is behavior change — if you don't change your behavior, did you actually learn?&quot;</strong></p>
+<p>Complete these in order. Each maps to a chapter.</p>
+<h2 id="1-foundations-ch-1"><a class="header" href="#1-foundations-ch-1">1. Foundations (ch. 1)</a></h2>
+<ul>
+<li><input disabled="" type="checkbox"/>
+Compute your LTV and CAC for one offer; note the ratio.</li>
+<li><input disabled="" type="checkbox"/>
+Identify which demand type (current or future) you're under-investing in, and pick one action for this week.</li>
+</ul>
+<h2 id="2-six-ps-ch-2"><a class="header" href="#2-six-ps-ch-2">2. Six P's (ch. 2)</a></h2>
+<ul>
+<li><input disabled="" type="checkbox"/>
+Fill in all six P's for your offer: People / Positioning / Promise / Proof / Priority / Process.</li>
+<li><input disabled="" type="checkbox"/>
+Run the &quot;so what?&quot; test on your promise until you reach the core outcome.</li>
+<li><input disabled="" type="checkbox"/>
+Pass the proof through the deaf-and-mute test (can you <em>point</em> at it?).</li>
+</ul>
+<h2 id="3-empathy-map-ch-3"><a class="header" href="#3-empathy-map-ch-3">3. Empathy map (ch. 3)</a></h2>
+<ul>
+<li><input disabled="" type="checkbox"/>
+Draw the empathy map: current reality / fears / goals.</li>
+<li><input disabled="" type="checkbox"/>
+Mine 10 verbatim customer phrases (sales calls, tickets, comments).</li>
+<li><input disabled="" type="checkbox"/>
+Convert 3 phrases into hooks.</li>
+</ul>
+<h2 id="4-personal-brand-ch-4"><a class="header" href="#4-personal-brand-ch-4">4. Personal brand (ch. 4)</a></h2>
+<ul>
+<li><input disabled="" type="checkbox"/>
+Write your PTL demonstration plan (power, trust, likeness — verbal + visual).</li>
+<li><input disabled="" type="checkbox"/>
+Define your transformation niche (A → Z) and list 5 subtopics.</li>
+<li><input disabled="" type="checkbox"/>
+Schedule one PTL-demonstrating post this week.</li>
+</ul>
+<h2 id="5-content-multiplication-ch-5"><a class="header" href="#5-content-multiplication-ch-5">5. Content multiplication (ch. 5)</a></h2>
+<ul>
+<li><input disabled="" type="checkbox"/>
+Build your Hall of Fame: 5 best posts with metrics.</li>
+<li><input disabled="" type="checkbox"/>
+For the top post: 1 repost (90 days), 2 repurposes, 3 remixes.</li>
+</ul>
+<h2 id="6-ad-writing-ch-6"><a class="header" href="#6-ad-writing-ch-6">6. Ad writing (ch. 6)</a></h2>
+<ul>
+<li><input disabled="" type="checkbox"/>
+1-page Story Bible for a real offer.</li>
+<li><input disabled="" type="checkbox"/>
+5-line why-they-buy sheet.</li>
+<li><input disabled="" type="checkbox"/>
+Write one kaleidoscoped ad: 5 hooks, 1 body, 1 CTA; run the 5-point hook checklist before shipping.</li>
+</ul>
+<h2 id="7-media-buying-ch-7"><a class="header" href="#7-media-buying-ch-7">7. Media buying (ch. 7)</a></h2>
+<ul>
+<li><input disabled="" type="checkbox"/>
+Reframe your ad objective from CPL to AOV/LTGP.</li>
+<li><input disabled="" type="checkbox"/>
+Plan a 15–30 creative batch per $10K of spend.</li>
+<li><input disabled="" type="checkbox"/>
+Audit campaign rebuilds against Meta's 50-conversion / 14-day learning window.</li>
+</ul>
+<h2 id="the-through-line-again"><a class="header" href="#the-through-line-again">The through-line, again</a></h2>
+<blockquote>
+<p>&quot;The game is won before the pen is even used.&quot; Research first, writing second.</p>
+</blockquote>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+    </body>
+</html>
