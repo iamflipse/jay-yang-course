@@ -1,0 +1,336 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>The 5-Step Ad Writing Process - Writing Words That Make People Buy</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="A study course on copy thinking, personal brand, and paid ads — built from Jay Yang&#x27;s three &#x27;Full Courses&#x27; videos.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="introduction.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Part 1 — Copy Thinking</li><li class="chapter-item expanded "><a href="chapter-01-foundations.html"><strong aria-hidden="true">1.</strong> The Foundations of Marketing</a></li><li class="chapter-item expanded "><a href="chapter-02-six-ps.html"><strong aria-hidden="true">2.</strong> The Six P's of Copy Thinking</a></li><li class="chapter-item expanded "><a href="chapter-03-empathy-maps.html"><strong aria-hidden="true">3.</strong> Empathy Maps & Sales-Call Mining</a></li><li class="chapter-item expanded affix "><li class="part-title">Part 2 — Personal Brand</li><li class="chapter-item expanded "><a href="chapter-04-personal-brand.html"><strong aria-hidden="true">4.</strong> Building a Personal Brand That People Buy From</a></li><li class="chapter-item expanded "><a href="chapter-05-content-multiplication.html"><strong aria-hidden="true">5.</strong> Content Multiplication</a></li><li class="chapter-item expanded affix "><li class="part-title">Part 3 — Paid Ads</li><li class="chapter-item expanded "><a href="chapter-06-writing-ads.html" class="active"><strong aria-hidden="true">6.</strong> The 5-Step Ad Writing Process</a></li><li class="chapter-item expanded "><a href="chapter-07-media-buying.html"><strong aria-hidden="true">7.</strong> Media Buying Principles</a></li><li class="chapter-item expanded affix "><li class="part-title">Practice</li><li class="chapter-item expanded "><a href="exercises.html"><strong aria-hidden="true">8.</strong> Exercises (Workbook)</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Writing Words That Make People Buy</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="the-5-step-ad-writing-process"><a class="header" href="#the-5-step-ad-writing-process">The 5-Step Ad Writing Process</a></h1>
+<p>From course 3 (~04:27): &quot;The five steps I go through whenever I'm signing a new client to help them build their ads system.&quot;</p>
+<h2 id="step-1--the-story-bible"><a class="header" href="#step-1--the-story-bible">Step 1 — The Story Bible</a></h2>
+<p>A &quot;universal source of truth&quot;: a living document you pull from whenever you write a piece of copy or an ad.</p>
+<p>It contains:</p>
+<ul>
+<li>Who the client is + their full life story</li>
+<li>Who the customers are</li>
+<li>The offer and the funnel</li>
+<li>The <strong>credibility bank</strong> (impressive results, frameworks, concepts the client talks about)</li>
+<li>The avatar's top objections + where they hang out</li>
+<li>Required links, approved/banned words, claims and guarantees</li>
+<li>Voice examples (how the client sounds)</li>
+</ul>
+<p>Sources: interview the client (or yourself), YouTube videos, podcasts.</p>
+<blockquote>
+<p>&quot;In a 60-second reel you can hide behind a script. A YouTube video is no-hiding.&quot;</p>
+</blockquote>
+<p>AI assist: for video-only creators, use Claude to download + transcribe their Instagram videos and build a <strong>voice skill</strong>.</p>
+<blockquote>
+<p>&quot;We update the story Bible in real time, so each iteration of ads makes the next batch better.&quot;</p>
+</blockquote>
+<h2 id="step-2--the-why-they-buy-sheet"><a class="header" href="#step-2--the-why-they-buy-sheet">Step 2 — The &quot;Why They Buy&quot; Sheet</a></h2>
+<blockquote>
+<p>&quot;One of those tactics that are super juicy, I feel uncomfortable giving away in free content. It absolutely crushes.&quot;</p>
+</blockquote>
+<p>Download the client's sales calls → transcribe → pull out key phrasings to say back in the ads:</p>
+<ul>
+<li>The exact words for <strong>why they bought</strong></li>
+<li>Their <strong>dream outcome</strong></li>
+<li>Current <strong>pains and frustrations</strong></li>
+<li><strong>Objections</strong> (why they were hesitant)</li>
+</ul>
+<p>Then build a <strong>PCP (Perfect Client Profile)</strong>: the customers who pay the most, stay the longest, and who you most enjoy helping.</p>
+<blockquote>
+<p>&quot;This is strategy: identify the 20% that gets 80% of the returns — the messaging that got these people in the door — and align it across the funnel. More of the people you want, less of the people you don't.&quot;</p>
+</blockquote>
+<p>No sales calls? Mine <strong>competitor comment sections, Reddit, and Amazon 3-star reviews</strong>:</p>
+<blockquote>
+<p>&quot;The 3-star reviews are typically the most truthful.&quot;</p>
+</blockquote>
+<h2 id="step-3--research"><a class="header" href="#step-3--research">Step 3 — Research</a></h2>
+<blockquote>
+<p>&quot;This is the magic sauce. This is the difference between okay copywriters and great copywriters.&quot;</p>
+</blockquote>
+<p>Eugene Schwartz:</p>
+<blockquote>
+<p>&quot;Copy cannot create desire. It can only channel existing desire.&quot;</p>
+</blockquote>
+<blockquote>
+<p>&quot;The best copywriters I know don't have English degrees... they are masters of psychology.&quot;</p>
+</blockquote>
+<p>Research checklist:</p>
+<ol>
+<li>
+<p><strong>Market</strong> — is it validated? Three filters:</p>
+<ul>
+<li>Are people already paying? (Meta Ads Library: competitors' ads running for months = money in the market)</li>
+<li>Is there an untapped subgroup nobody's marketing to?</li>
+<li>Do they already know they have a problem?</li>
+</ul>
+<blockquote>
+<p>The &quot;starving crowd&quot; beats every other advantage (burger-stand thought experiment: the best advantage isn't better meat or location — it's a starving crowd).</p>
+</blockquote>
+</li>
+<li>
+<p><strong>Offer</strong> — copy can only communicate the value the offer already has. Tweak via the <strong>three vectors of value: speed, risk, ease</strong>.</p>
+<blockquote>
+<p>Fitness example: a $10K/6-month gym program is a weak offer; &quot;one pill a morning, no gym, no diet&quot; is a stronger offer. Find the weakest vector and tweak it.</p>
+</blockquote>
+</li>
+<li>
+<p><strong>Awareness levels</strong> (Schwartz's five): unaware → problem-aware → solution-aware → product-aware → most-aware. Each level changes your ad language (see the awareness table in <a href="#awareness">ch. 6 recap</a>).</p>
+</li>
+<li>
+<p><strong>Market sophistication</strong> (five stages; see below).</p>
+</li>
+<li>
+<p><strong>Unique mechanism</strong> —</p>
+<blockquote>
+<p>&quot;A unique mechanism is an explanation of why other solutions fail and why yours is better.&quot; Find yours with: &quot;Most people believe X. It's wrong because of Y. And the answer is actually Z.&quot;</p>
+</blockquote>
+<p>Worked: &quot;Most business owners think it's a leads problem. Actually it's not that you lack customers — you don't know how to <strong>monetize</strong> them. You don't have a <strong>money model</strong>.&quot; (The frame behind the Money Models book.)</p>
+<p>Worked client case: a 7-figure fitness business built entirely on the frame &quot;you don't lack discipline, you lack an <strong>accountability buddy</strong>.&quot;</p>
+</li>
+<li>
+<p><strong>Big idea</strong> (Ogilvy: &quot;if you don't have a big idea, your advertising will pass like a ship in the night&quot;). A big idea is <strong>new, easy, safe, big</strong>.</p>
+<ul>
+<li>De Beers: &quot;diamonds are forever&quot; — changed culture.</li>
+<li>Shelby Sap: &quot;the Porsche Pilates lifestyle&quot; — named a feeling her audience couldn't articulate.</li>
+</ul>
+</li>
+<li>
+<p><strong>Beliefs</strong> — before buying, customers must believe in: the <strong>vehicle</strong> (does it work), <strong>themselves</strong> (internal), and the <strong>external world</strong> (will it work in my life). Rotate these beliefs across ads so objections are pre-handled by checkout.</p>
+</li>
+</ol>
+<h2 id="step-4--write-the-ad"><a class="header" href="#step-4--write-the-ad">Step 4 — Write the ad</a></h2>
+<p>Per ad: <strong>5 hooks, 1 body, ~3 CTAs</strong> — <strong>kaleidoscoping</strong>: test many hook angles against one body before opening a new ad set.</p>
+<p><strong>Where to find hooks</strong> (5 places, course 3 ~24:52):</p>
+<ol>
+<li>Your previous winning ads (Meta Ads Library)</li>
+<li>Competitors' ads (Meta Ads Library)</li>
+<li>Your own organic content (the explore → exploit loop)</li>
+<li>Other people's free content</li>
+<li><strong>Outlier tweets</strong> from &quot;money Twitter&quot;:
+<blockquote>
+<p>&quot;When Elon Musk takes a bathroom break, he's not scrolling Instagram — he's on Twitter.&quot;
+Example: a 400K-view tweet (&quot;Have you ever had a job where you thought none of this matters?&quot;) → hook: &quot;If you've ever sat at your desk and thought none of this matters, this video is for you.&quot;</p>
+</blockquote>
+</li>
+</ol>
+<p><strong>Hook rules</strong>:</p>
+<ul>
+<li><strong>Specificity sells</strong> (Claude Hopkins): &quot;Platitudes and generalities roll off the human understanding like water off a duck's back.&quot; &quot;Are you broke?&quot; is weak; &quot;Do you turn your phone brightness down when you open your bank app?&quot; is strong.</li>
+<li>The hook must be a <strong>promise that opens a curiosity gap</strong> — not a bare statement.</li>
+<li>Be specific in hooks, broader in bodies (the body gets reused across hooks).</li>
+<li>&quot;We state the facts and tell the truth. We don't write lies; we manipulate reality so the copy is better.&quot;</li>
+<li>Outcomes must be visualizable: not &quot;you'll sleep better,&quot; but &quot;on average, our customers fall asleep in under 10 minutes.&quot;</li>
+</ul>
+<p><strong>The 5-point pre-ship checklist</strong>:</p>
+<ol>
+<li>Is it a call-out or an open loop?</li>
+<li>Would our client say this out loud to a friend in a coffee shop?</li>
+<li>Would a stranger with zero context understand it?</li>
+<li>Is it free of insider language and buzzwords?</li>
+<li>Is it concrete and visualizable?</li>
+</ol>
+<p><strong>CTA formula</strong>: <strong>Who does what, by when, and how.</strong></p>
+<blockquote>
+<p>&quot;If you're a woman who wants to break into high-ticket sales, then I want you to register for my free Zoom masterclass this Tuesday at 8pm ET. Click below and save your spot.&quot;</p>
+</blockquote>
+<h2 id="step-5--ship-measure-double-down"><a class="header" href="#step-5--ship-measure-double-down">Step 5 — Ship, measure, double down</a></h2>
+<p>When one ad set's hooks outperform, &quot;double down on that branch&quot; rather than rebuilding the ad.</p>
+<details><summary>Awareness & sophistication quick reference</summary>
+<p><strong>Awareness</strong> (customer's knowledge):
+| Level | Ad language |
+|---|---|
+| Unaware | Name the problem (&quot;you may have a misplaced disk&quot;) |
+| Problem-aware | Recommend + explain why your solution |
+| Solution-aware | Differentiate: why yours is different/better |
+| Product-aware / Most-aware | Present the compelling offer; skim the goodwill organic content built |</p>
+<p><strong>Sophistication</strong> (market's saturation):
+| Stage | Move |
+|---|---|
+| 1 no claim made | Make the claim |
+| 2 competitors arrive | Make a bigger claim |
+| 3 claims worn out | Introduce a <strong>mechanism</strong> |
+| 4 mechanism copied | Improve the mechanism |
+| 5 saturated | Identify with the person they want to become (personal brand) |</p>
+<p>Identify your stage: check 20 competitor ads in the Meta Ads Library — if they all make the same claim, you're stage 3+ and need a mechanism.</p>
+</details>
+<h2 id="principles-woven-through-the-chapter"><a class="header" href="#principles-woven-through-the-chapter">Principles woven through the chapter</a></h2>
+<ul>
+<li><strong>Respect the reader</strong> (Ogilvy): &quot;Your consumer is not a moron. It is your wife, as best as possible.&quot; No fake urgency; under-delivery spawns negative word-of-mouth that &quot;will be on the internet forever.&quot;</li>
+<li><strong>Damaging admission</strong>: &quot;I'm 20 years old, I can't dance, I can't golf, I can't even drink yet. But the one thing I know with 100% confidence is that I am a dangerous copywriter.&quot;</li>
+<li><strong>Copy is a mall window</strong>: &quot;The goal is to see the items in the store, not to look at the glass.&quot;</li>
+<li><strong>AI use</strong>: write the copy yourself (writing = thinking); use AI for research, competitor analysis, and batch review of finished ads.</li>
+</ul>
+<h2 id="exercise"><a class="header" href="#exercise">Exercise</a></h2>
+<p>Run steps 1–4 on one real offer: build a 1-page Story Bible, a 5-line why-they-buy sheet, and one ad (5 hooks, 1 body, 1 CTA).</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="chapter-05-content-multiplication.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="chapter-07-media-buying.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="chapter-05-content-multiplication.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="chapter-07-media-buying.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>
