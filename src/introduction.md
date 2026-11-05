@@ -6,7 +6,9 @@
 2. *How to Build a Personal Brand That People Buy From* (22.9 min)
 3. *How to Create Ads That Make People Buy* (37.2 min)
 
-**Live course site:** <https://iamflipse.github.io/jay-yang-course/>
+**Live sites:**
+- Wiki: <https://iamflipse.github.io/jay-yang-wiki/> — concept notes + raw transcripts
+- Course: <https://iamflipse.github.io/jay-yang-course/> — this site
 
 ## How to use this course
 
